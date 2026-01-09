@@ -2628,6 +2628,13 @@ a.ui-button:active,
     max-width: 300px;
     width: 100%;
 }
+.footer_grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;   /* 🔥 sab ek row me */
+    gap: 40px;
+}
 
 .footer_ptxt {
     color: var(--4, #222);
@@ -2660,6 +2667,8 @@ a.ui-button:active,
 
 .footer_ul {
     padding-left: 0px;
+     max-width: 280px;     /* address ke liye column width */
+    width: 100%;
 }
 
 .footer_ul li {
@@ -2691,6 +2700,9 @@ a.ui-button:active,
 
 .working1 {
     gap: 30px;
+    display: flex;
+    gap: 40px;
+    flex: 0 0 auto;
 }
 
 .footer_row {
@@ -4466,9 +4478,55 @@ input:checked+.slider:before {
     top: 120px;
 }
 
+
+
+/* ===== PAGE INTRO SECTION ===== */
+.page_intro {
+    background: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page_title {
+    font-family: "Outfit", sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    color: #3b2f1f;   /* classy brown tone like image */
+    margin-bottom: 18px;
+}
+
+.page_desc {
+    max-width: 820px;
+    margin: 0 auto;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    color: #555;
+}
+
+.page_desc strong {
+    color: #000;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .page_title {
+        font-size: 32px;
+    }
+
+    .page_desc {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 0 10px;
+    }
+}
+
+
 /* ============================ 25.Project_page CSS ======================= */
 .project_hero_section {
-    background-image: url(../image/project/project_back.jpg);
+    /* background-image: url(../image/project/project_back.jpg); */
+    background-image: url(../image/project/project_back.png);
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -5269,7 +5327,7 @@ input:checked+.slider:before {
 .box-fix-setting {
     width: 50px;
     height: 50px;
-    background-color: #8ade47;
+    background-color: #ff000082;
     border-radius: 10px 0 0 10px;
     display: flex;
     align-items: center;
