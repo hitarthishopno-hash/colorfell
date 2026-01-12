@@ -412,9 +412,9 @@ header.scrolled .nav {
 
 .bubbles {
     width: fit-content;
-    padding: 20px 15px;
+    padding: 5px 11px;
     background-color: #f8100d;
-    border: 2px solid #f8100d;
+    border: 1px solid #f8100d;
     border-radius: 20px;
     cursor: pointer;
     overflow: hidden;
@@ -423,7 +423,7 @@ header.scrolled .nav {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 67px;
+    height: 53px;
 }
 
 .text {
@@ -1037,8 +1037,8 @@ body.sidebar-open {
 }
 
 .simple_card .new_h3 {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 21px;
+    font-weight: 400;
     line-height: 30px;
     color: #000;
     margin: 0;
@@ -1340,7 +1340,7 @@ body.sidebar-open {
 }
 
 /* ============================ 8.Meet CSS ======================= */
-.meet_section {
+/* .meet_section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)),
         url(../image/home/meet.jpg);
@@ -1362,7 +1362,195 @@ body.sidebar-open {
     font-style: normal;
     font-weight: 500;
     line-height: 64px;
+} */
+
+/* ================================= ART HIGHLIGHT SECTION ================================= */
+.art-highlight-section {
+    padding: 0px 52px;
+    background: #fff;
 }
+
+.art-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 0 100px;
+}
+
+.art-highlight-card {
+    position: relative;
+    min-height: 580px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.art-highlight-card:first-child {
+    border-radius: 40px 140px 40px 140px;
+    animation: smoothFromRight 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.art-highlight-card:last-child {
+    border-radius: 140px 40px 140px 40px;
+    animation: smoothFromLeft 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.25s;
+}
+
+
+.art-highlight-card::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    width: 5px;
+    height: 130px;
+    background: #d11c1c;
+    border-radius: 10px;
+    z-index: 6;
+}
+
+.art-highlight-card:first-child::before {
+    left: 0;
+}
+
+.art-highlight-card:last-child::before {
+    right: 0;
+}
+
+.art-highlight-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.art-highlight-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.03),
+            rgba(0, 0, 0, 0.22));
+    z-index: 1;
+}
+
+.art-highlight-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: #f9f6f3;
+    padding: 36px 38px;
+    border-radius: 32px;
+    max-width: 420px;
+    z-index: 7;
+}
+
+.art-highlight-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-bottom: 14px;
+}
+
+.art-highlight-tag::before {
+    content: "•";
+    color: #d11c1c;
+    font-size: 18px;
+}
+
+.art-highlight-content h3 {
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #111;
+    margin-bottom: 14px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+}
+
+.art-highlight-content p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 26px;
+}
+
+.art-highlight-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 19px;
+    text-decoration: none;
+    background: #f8100d;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+
+@keyframes smoothFromRight {
+    from {
+        transform: translateX(140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes smoothFromLeft {
+    from {
+        transform: translateX(-140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .art-highlight-grid {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .art-highlight-grid {
+        grid-template-columns: 1fr;
+        margin: 0 20px;
+    }
+
+    .art-highlight-card {
+        min-height: 480px;
+        opacity: 1;
+        animation: none;
+        transform: none;
+    }
+
+    .art-highlight-card:first-child,
+    .art-highlight-card:last-child {
+        border-radius: 80px 80px 40px 40px;
+    }
+
+    .art-highlight-card::before {
+        left: 0;
+        right: auto;
+    }
+
+    .art-highlight-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
 
 
 
@@ -1726,7 +1914,7 @@ body.sidebar-open {
 
 .dream_txtarea {
     width: 100%;
-    height: 95px;
+    height: 150px;
     border-radius: 10px;
     border: 1px solid #8080804a;
     background: var(--5, #FFF);
@@ -1958,136 +2146,138 @@ a.ui-button:active,
 /* ================= WHY US ================= */
 
 .why_us {
-  padding: 80px 0 100px;
-  background: #f5f6f7;
+    padding: 80px 0 100px;
+    background: #f5f6f7;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
 }
 
 .whyus_title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 70px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 70px;
 }
 
 /* GRID SAME AS DESIGN */
 .whyus_circle {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 55px 45px;
-  align-items: center;
-  position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 45px;
+    align-items: center;
+    position: relative;
 }
 
 /* CARD */
 .whyus_item {
-  background: #fff;
-  border-radius: 18px;
-  padding: 42px 20px;
-  text-align: center;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.05);
-  transition: all 0.35s ease;
-      border: 1px solid #80808042
+    background: #fff;
+    border-radius: 18px;
+    padding: 42px 20px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s ease;
+    border: 1px solid #80808042
 }
 
 .whyus_item p {
-  margin-top: 18px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #333;
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
 }
 
 /* ================= ICON DOUBLE RING ================= */
 /* ================= WHY US ================= */
 .why_us {
-  padding: 45px 0;
-  background: #fff;
-  overflow: hidden;
+    padding: 45px 0;
+    background: #fff;
+    overflow: hidden;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
 }
 
 .whyus_title {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 35px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 35px;
 }
 
 /* ================= CIRCLE LAYOUT ================= */
 .circle-layout {
-  position: relative;
-  width: 760px;     /* thoda bada for spacing */
-  height: 760px;
-  margin: auto;
+    position: relative;
+    width: 760px;
+    /* thoda bada for spacing */
+    height: 760px;
+    margin: auto;
 }
 
 /* ================= CARD ================= */
 .whyus_item {
-  position: absolute;
-  width: 245px;     /* thodi zyada width */
-  background: #fff;
-  padding: 22px 16px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
+    position: absolute;
+    width: 245px;
+    /* thodi zyada width */
+    background: #fff;
+    padding: 22px 16px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
 }
 
 .whyus_item p {
-  margin-top: 12px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
+    margin-top: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
 }
 
 /* ================= ICON ================= */
 .whyus_icon {
-  width: 72px;
-  height: 72px;
-  margin: auto;
-  border-radius: 50%;
-  background: #fdeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    width: 72px;
+    height: 72px;
+    margin: auto;
+    border-radius: 50%;
+    background: #fdeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .whyus_icon::before {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 1.2px solid #ffd6d6;
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1.2px solid #ffd6d6;
 }
 
 .whyus_icon img {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 /* ================= CENTER LOGO ================= */
 .whyus_center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .whyus_center img {
-  width: 194px;
-  height: 61px;
-  filter: drop-shadow(0 4px 14px rgba(255,0,0,0.2));
+    width: 194px;
+    height: 61px;
+    filter: drop-shadow(0 4px 14px rgba(255, 0, 0, 0.2));
 }
 
 /* ================= POSITIONS (LEFT EXTRA OUT) ================= */
@@ -2096,80 +2286,84 @@ a.ui-button:active,
 
 /* TOP CENTER */
 .pos1 {
-  top: 40px;
-  left: 49%;
-  transform: translateX(-50%);
+    top: 40px;
+    left: 49%;
+    transform: translateX(-50%);
 }
 
 /* TOP RIGHT */
 .pos2 {
-  top: 28%;          /* SAME as pos6 */
-  right: -10px;
+    top: 28%;
+    /* SAME as pos6 */
+    right: -10px;
 }
 
 /* BOTTOM RIGHT */
 .pos3 {
-  bottom: 28%;       /* SAME as pos5 */
-  right: -10px;
+    bottom: 28%;
+    /* SAME as pos5 */
+    right: -10px;
 }
 
 /* BOTTOM CENTER */
 .pos4 {
-  bottom: 60px;
-  left: 49%;
-  transform: translateX(-50%);
+    bottom: 60px;
+    left: 49%;
+    transform: translateX(-50%);
 }
 
 /* BOTTOM LEFT */
 .pos5 {
-  bottom: 28%;       /* SAME as pos3 */
-  left: -40px;
+    bottom: 28%;
+    /* SAME as pos3 */
+    left: -40px;
 }
 
 /* TOP LEFT */
 .pos6 {
-  top: 28%;          /* SAME as pos2 */
-  left: -40px;
+    top: 28%;
+    /* SAME as pos2 */
+    left: -40px;
 }
 
 
 /* ================= HOVER ================= */
 .whyus_item:hover,
 .whyus_item.active {
-  box-shadow: 0 14px 35px rgba(255,0,0,0.25);
+    /* box-shadow: 0 14px 35px rgba(255, 0, 0, 0.25); */
 }
 
 .whyus_item:hover p,
 .whyus_item.active p {
-  color: #ff2b2b;
+    color: #ff2b2b;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
-  .circle-layout {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
+    .circle-layout {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
 
-  .whyus_item,
-  .whyus_center {
-    position: static;
-    transform: none;
-    margin: auto;
-  }
+    .whyus_item,
+    .whyus_center {
+        position: static;
+        transform: none;
+        margin: auto;
+    }
 
-  .whyus_center {
-    margin: 12px 0;
-  }
+    .whyus_center {
+        margin: 12px 0;
+    }
 }
 
 @media (max-width: 576px) {
-  .circle-layout {
-    grid-template-columns: 1fr;
-  }
+    .circle-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -2447,7 +2641,7 @@ a.ui-button:active,
     margin-top: 10px;
     color: var(--4, #222);
     font-family: Outfit;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     display: -webkit-box;
@@ -2460,7 +2654,7 @@ a.ui-button:active,
 
 .news_box {
     border-radius: 20px;
-    border: 1px solid #8080804a ;
+    border: 1px solid #8080804a;
     background: var(--5, #FFF);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
@@ -2553,11 +2747,12 @@ a.ui-button:active,
     border-bottom: 1px solid #eee;
     background: #f5f6f7;
 }
+
 .shipping-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    align-items: center; 
+    align-items: center;
 }
 
 .shipping-item {
@@ -2569,7 +2764,7 @@ a.ui-button:active,
 .shipping-item img {
     width: 85px;
     height: 85px;
-     object-fit: contain;
+    object-fit: contain;
 }
 
 .shipping-item h4 {
@@ -2628,11 +2823,13 @@ a.ui-button:active,
     max-width: 300px;
     width: 100%;
 }
+
 .footer_grid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: nowrap;   /* 🔥 sab ek row me */
+    flex-wrap: nowrap;
+    /* 🔥 sab ek row me */
     gap: 40px;
 }
 
@@ -2667,7 +2864,8 @@ a.ui-button:active,
 
 .footer_ul {
     padding-left: 0px;
-     max-width: 280px;     /* address ke liye column width */
+    max-width: 280px;
+    /* address ke liye column width */
     width: 100%;
 }
 
@@ -2983,7 +3181,7 @@ a.ui-button:active,
     position: fixed;
     width: 60px;
     height: 60px;
-    background-color: #FF2424;
+    background-color: #f8100d;
     color: #FFF;
     bottom: 40px;
     right: 40px;
@@ -4491,7 +4689,8 @@ input:checked+.slider:before {
     font-family: "Outfit", sans-serif;
     font-size: 44px;
     font-weight: 600;
-    color: #3b2f1f;   /* classy brown tone like image */
+    color: #3b2f1f;
+    /* classy brown tone like image */
     margin-bottom: 18px;
 }
 
@@ -5316,10 +5515,10 @@ input:checked+.slider:before {
 /* ============================ 28.Setting CSS ======================= */
 .setting-main {
     position: fixed;
-    right: 0;
-    top: 50%;
+    left: 0;
+    top: 70%;
     z-index: 100;
-    gap: 10px;
+    gap: 18px;
     display: flex;
     flex-direction: column;
 }
@@ -5327,7 +5526,7 @@ input:checked+.slider:before {
 .box-fix-setting {
     width: 50px;
     height: 50px;
-    background-color: #ff000082;
+    background-color: #f8100d;
     border-radius: 10px 0 0 10px;
     display: flex;
     align-items: center;
@@ -5335,11 +5534,13 @@ input:checked+.slider:before {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transform: scaleX(-1);
 }
 
 .setting {
     /* animation: rotation 3s infinite linear; */
     width: 35px;
+    transform: scaleX(-1);
 }
 
 @keyframes rotation {
