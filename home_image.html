@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
 
 </head>
 
@@ -193,15 +196,11 @@
 
 
 
-        <header>
-            <div class="header_containt d-flex align-items-center">
-
-                <!-- LEFT LOGO -->
+        <!-- <header>
+            <div class="header_containt d-flex align-items-center">     
                 <a href="home_image.html" class="logo">
                     <img src="assets/image/svg/logo.png" alt="logo" style="margin-top: 9px;">
                 </a>
-
-                <!-- CENTER NAV -->
                 <nav class="navbar_header center_nav">
                     <ul class="nav">
                         <li><a href="#">Canvas Painting</a></li>
@@ -222,8 +221,6 @@
                         <li><a href="#">Portfolio</a></li>
                     </ul>
                 </nav>
-
-                <!-- RIGHT ICONS -->
                 <div class="header_icons">
                     <a href="#" class="icon_btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -238,11 +235,6 @@
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </div>
-
-
-
-
-                <!-- HAMBURGER (mobile) -->
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -250,7 +242,152 @@
                 </div>
 
             </div>
+        </header> -->
+
+
+
+
+
+
+        <header class="row">
+            <div class="header_containt d-flex justify-content-between col-xl-12">
+                <a href="home_image.html" class="logo col-xl-3">
+
+                    <img src="assets/image/svg/logo.png" alt="logo" style="margin-top: 9px;">
+                </a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="navbar_header col-xl-9">
+                    <ul class="nav">
+                        <li class="sidebar_logo">
+                            <a href="index.html">
+                                <img src="assets/image/svg/logo.png" alt="logo">
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="demo_txt">
+                                <p>Canvas Painting</p>
+
+                                <!-- <img src="assets/image/svg/headerarrow.svg" alt="headerarrow" class="headerarrow"> -->
+                            </a>
+                            <ul class="dropdown_menu">
+                                <li><a href="index.html">Home Solid</a></li>
+                                <li><a href="home_image.html">Home Slider</a></li>
+                                <li><a href="home_video.html">Home Video</a></li>
+                                <li><a href="home_mix.html">Home Mix Slider</a></li>
+                            </ul>
+                        </li>
+                        <li class="bullate">
+                            <img src="assets/image/svg/bullate.svg" alt="bullate">
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="demo_txt">
+                                <p>Wallpaper</p>
+
+                                <!-- <img src="assets/image/svg/headerarrow.svg" alt="headerarrow" class="headerarrow"> -->
+                            </a>
+                            <ul class="dropdown_menu">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="process.html">Our Process</a></li>
+                                <li><a href="team.html">Our Team</a></li>
+                                <li><a href="team_details.html">Team Details</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="pricing_plan.html">Pricing Plan</a></li>
+                                <li><a href="appointment.html">Appointment</a></li>
+                                <li><a href="testimonial.html">Testimonial</a></li>
+                                <li><a href="error.html">404 Error</a></li>
+                            </ul>
+                        </li>
+                        <li class="bullate">
+                            <img src="assets/image/svg/bullate.svg" alt="bullate">
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="demo_txt">
+                                <p>Wall Murals</p>
+
+                                <!-- <img src="assets/image/svg/headerarrow.svg" alt="headerarrow" class="headerarrow"> -->
+                            </a>
+                            <ul class="dropdown_menu">
+                                <li><a href="services.html">All Services</a></li>
+                                <li><a href="service_interior.html">Interior Service</a></li>
+                                <li><a href="service_exterior.html">Exterior Service</a></li>
+                                <li><a href="service_commercial.html">Commercial Service</a></li>
+                                <li><a href="service_decorative.html">Decorative Service</a></li>
+                            </ul>
+                        </li>
+                        <li class="bullate">
+                            <img src="assets/image/svg/bullate.svg" alt="bullate">
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="demo_txt">
+                                <p>Round Frames</p>
+
+                                <!-- <img src="assets/image/svg/headerarrow.svg" alt="headerarrow" class="headerarrow"> -->
+                            </a>
+                            <ul class="dropdown_menu">
+                                <li><a href="project.html">Projects Grid</a></li>
+                                <li><a href="project_masonry.html">Project Masonry</a></li>
+                                <li><a href="project_slider.html">Project Slider</a></li>
+                                <li><a href="project_details.html">Single Project 1</a></li>
+                                <li><a href="project_details_second.html">Single Project 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="bullate">
+                            <img src="assets/image/svg/bullate.svg" alt="bullate">
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="demo_txt">
+                                <p>Gallary Walls</p>
+
+                                <!-- <img src="assets/image/svg/headerarrow.svg" alt="headerarrow" class="headerarrow"> -->
+                            </a>
+                            <ul class="dropdown_menu">
+                                <li><a href="blog.html">Blog 1</a></li>
+                                <li><a href="blog_details.html">Blog 2</a></li>
+                                <li><a href="blog_details_second.html">Blog 3</a></li>
+                                <li><a href="blog_right_sidebar.html">Right Sidebar</a></li>
+                                <li><a href="blog_left_sidebar.html">Left Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li class="bullate">
+                            <img src="assets/image/svg/bullate.svg" alt="bullate">
+                        </li>
+                        <li class="drop"><a href="contact.html">Portfolio</a></li>
+
+                    </ul>
+                    <div class="header_icons">
+                        <a href="#" class="icon_btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <a href="#" class="icon_btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <a href="#" class="icon_btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a href="#" class="icon_btn user_btn">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </div>
+
+                </nav>
+            </div>
         </header>
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- ======================= Hero Section ======================= -->
         <section class="second_hero_section">
@@ -492,18 +629,17 @@
 
 
         <!-------------------------------- LATEST NEW SECTION ------------------------------->
-        <section class="offer_section">
+        <!-- <section class="offer_section">
             <div class="container">
                 <p class="offer_p text-center">latest news</p>
                 <h2 class="offer_h2 text-center mt-2">Our Most Recent Posts</h2>
                 <div class="news_viewport">
 
-                    <!-- LEFT ARROW -->
+                 
                     <button class="news_arrow news_arrow_left">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
 
-                    <!-- RIGHT ARROW -->
                     <button class="news_arrow news_arrow_right">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -587,12 +723,89 @@
                                 </div>
                             </div>
                         </a>
-
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section> -->
+        <section class="offer_section">
+            <div class="container">
+                <p class="offer_p text-center">latest news</p>
+                <h2 class="offer_h2 text-center mt-2">Our Most Recent Posts</h2>
 
+                <div class="news_viewport">
+
+
+                    <button class="news_arrow news_arrow_left">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <button class="news_arrow news_arrow_right">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+
+                    <div class="swiper newsSwiper mt-60">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="news_box">
+                                    <div class="news_main_effect">
+                                        <img src="assets/image/home/new1.png" class="new_img">
+                                        <p class="blog-date">20 FEB 2025</p>
+                                    </div>
+                                    <div class="new_containt">
+                                        <h3 class="new_h3">Choosing the right paint and shade</h3>
+                                        <p class="news_p">Molestie vitae cras accumsan nunc.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="news_box">
+                                    <div class="news_main_effect">
+                                        <img src="assets/image/home/new2.png" class="new_img">
+                                        <p class="blog-date">20 FEB 2025</p>
+                                    </div>
+                                    <div class="new_containt">
+                                        <h3 class="new_h3">Tips for choosing perfect color</h3>
+                                        <p class="news_p">Egestas et maecenas risus enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="news_box">
+                                    <div class="news_main_effect">
+                                        <img src="assets/image/home/new3.png" class="new_img">
+                                        <p class="blog-date">20 FEB 2025</p>
+                                    </div>
+                                    <div class="new_containt">
+                                        <h3 class="new_h3">Exterior painting modern ideas</h3>
+                                        <p class="news_p">Risus lobortis aliquam condimentum.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="news_box">
+                                    <div class="news_main_effect">
+                                        <img src="assets/image/home/new1.png" class="new_img">
+                                        <p class="blog-date">20 FEB 2025</p>
+                                    </div>
+                                    <div class="new_containt">
+                                        <h3 class="new_h3">Choosing the right paint and shade</h3>
+                                        <p class="news_p">Molestie vitae cras accumsan nunc.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
 
@@ -866,7 +1079,7 @@
 
                     <div class="art-highlight-content">
                         <span class="art-highlight-tag">• CUSTOMISATION MADE EASY</span>
-                        <h3>Free Customisation | Size & Colour</h3>
+                        <h3>Free Customisation | Size, Colour</h3>
                         <p>Get perfect size and colour without any extra cost.</p>
 
                         <a href="" class="art-highlight-btn">
@@ -1299,7 +1512,7 @@
                     <div class="d-flex w-100 align-items-end">
                         <!-- <img src="assets/image/home/dream.jpg" alt="dream" class="w-100 dream1">
                         <img src="assets/image/home/dream1.png" alt="dream1" class="dream2 d-flex"> -->
-                        <img src="assets/image/home/dreams.png" alt="">
+                        <img src="assets/image/home/dreams.png" alt="" class="w-100 dream1">
                     </div>
                     <div class="dream_row w-100">
                         <!-- <p class="offer_p text-md-start text-center fade_up">Make An Appointment</p> -->
@@ -1480,7 +1693,7 @@
         <section class="why_us new-whyus">
             <div class="container">
                 <h2 class="whyus_title offer_h2  fade_up">Why Choose Us?</h2>
-              
+
                 <div class="orbit-wrap">
 
                     <!-- Orbit Ring -->
@@ -1641,6 +1854,9 @@
 
 
 
+
+
+
         <!-- ======================= Rolliamge Section ======================= -->
         <section class="rollimage_section expand-img-main image">
             <h2 class="d-none">roll image</h2>
@@ -1783,6 +1999,68 @@
     <script src="assets/js/smothscrolling.js"></script>
     <script src="assets/js/setting-panel.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const newsSwiper = new Swiper(".newsSwiper", {
+                loop: true,
+                loopAdditionalSlides: 12,
+                spaceBetween: 30,
+
+                slidesPerView: 1,
+
+                /* ✅ PROPER ARROW BINDING */
+                navigation: {
+                    nextEl: ".news_arrow_right",
+                    prevEl: ".news_arrow_left",
+                },
+
+                autoplay: {
+                    delay: 999999, // mobile OFF
+                    disableOnInteraction: false,
+                },
+
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        speed: 15000,
+                        autoplay: {
+                            delay: 0, // continuous
+                            disableOnInteraction: false,
+                        }
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        speed: 18000,
+                        autoplay: {
+                            delay: 0, // continuous
+                            disableOnInteraction: false,
+                        }
+                    }
+                }
+            });
+
+            /* ✅ IMPORTANT: resume autoplay after arrow click */
+            newsSwiper.on("navigationNext", () => {
+                newsSwiper.autoplay.start();
+            });
+
+            newsSwiper.on("navigationPrev", () => {
+                newsSwiper.autoplay.start();
+            });
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
 
 
 </body>

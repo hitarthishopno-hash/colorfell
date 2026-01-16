@@ -219,6 +219,7 @@ p {
 }
 
 /* ============================ 2.Header CSS ======================= */
+
 .center_nav {
     flex: 1;
     display: flex;
@@ -229,6 +230,7 @@ p {
     display: flex;
     align-items: center;
     gap: 18px;
+    margin-right: 54px;
 }
 
 .header_icons {
@@ -336,7 +338,7 @@ p {
 
 
 header.scrolled {
-    width: 100%;
+    width: 104%;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -351,15 +353,18 @@ header.scrolled .nav {
 
 .nav {
     display: flex;
+    justify-content: center;
     gap: 30px;
     align-items: center;
-    background-color: #fff;
+
 }
 
 .navbar_header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 60px;
+    flex: 1;
 }
 
 .header_containt {
@@ -620,19 +625,19 @@ header.scrolled .nav {
     align-items: center;
     gap: 6px;
     cursor: pointer;
-    margin-top: 15px;
+
     position: relative;
     z-index: 1000;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     background-color: #FF2424;
     border-radius: 10px;
 }
 
 .hamburger span {
     display: block;
-    height: 3px;
-    width: 25px;
+    height: 2px;
+    width: 21px;
     background: #FFF;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -1075,6 +1080,10 @@ body.sidebar-open {
 
 
 /* Category css */
+
+
+
+
 .main-category {
     margin-top: 70px;
 }
@@ -1133,8 +1142,8 @@ body.sidebar-open {
 }
 
 .offer_section .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 10px;
+    padding-right: -10px;
 }
 
 .simple_card .new_h3 {
@@ -1467,7 +1476,8 @@ body.sidebar-open {
 
 /* ================================= ART HIGHLIGHT SECTION ================================= */
 .art-highlight-section {
-    padding: 0px 52px;
+    /* padding: 0px 52px; */
+      padding: 0px 0px;
     background: #fff;
 }
 
@@ -1552,7 +1562,7 @@ body.sidebar-open {
     font-size: 15px;
     letter-spacing: 1.5px;
     color: #777;
-    margin-bottom: 14px;
+    /* margin-bottom: 14px; */
 }
 
 .art-highlight-tag::before {
@@ -2368,6 +2378,8 @@ a.ui-button:active,
     left: 0;
 }
 
+
+
 /* Animation */
 @keyframes spin {
     from {
@@ -2634,6 +2646,21 @@ a.ui-button:active,
 }
 
 
+/* Tablet */
+@media (max-width: 991px) {
+    .newss {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .newss {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
 .new_row {
     display: flex;
     gap: 30px;
@@ -2641,6 +2668,7 @@ a.ui-button:active,
     z-index: 1;
     animation: newsScroll 40s linear infinite;
 }
+
 
 
 .news_viewport:hover .new_row {
@@ -5762,4 +5790,136 @@ input:checked+.slider:before {
 
 .btn-close {
     --bs-btn-close-focus-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 575px) {
+    .pos1 {
+        transform: none;
+        left: auto;
+    }
+}
+@media (max-width: 575px) {
+    .pos4 {
+        transform: none;
+        left: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.offer_section {
+    overflow: hidden;
+}
+
+.news_viewport {
+    position: relative;
+}
+
+/* swiper smooth infinite */
+.newsSwiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+/* arrows */
+.news_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.news_arrow_left { left: 10px; }
+.news_arrow_right { right: 10px; }
+
+.news_arrow:hover {
+    background: #FF2424;
+}
+
+.news_arrow:hover i {
+    color: #fff;
+}
+
+/* equal height cards */
+.newsSwiper .swiper-slide {
+    display: flex;
+    height: auto;
+}
+
+.news_box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+
+.news_main_effect {
+    position: relative;
+}
+
+.new_img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-date {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 20px 20px 0 0;
+}
+
+.new_containt {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .new_img {
+        height: 240px;
+    }
 }
