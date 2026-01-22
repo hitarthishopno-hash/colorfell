@@ -6,8 +6,8 @@
     .container-xl,
     .container-xxl,
     .container-fluid {
-        max-width: 1290px;
-         /* max-width: 1540px; */
+        /* max-width: 1290px; */
+         max-width: 1414px;
         padding: 0px 12px;
         box-sizing: border-box;
     }
