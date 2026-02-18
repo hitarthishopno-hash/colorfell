@@ -2,7 +2,7 @@
 function SettingsPanel() {
     const settingsHTML = `
     <div class="setting-main">
-        <a href="https://wa.me/9876543210" class="box-fix-setting">
+        <a href="https://wa.me/+919876543210" class="box-fix-setting">
             <img src="assets/image/svg/footer4.svg" alt="settings" class="setting" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasRight2">
         </a>

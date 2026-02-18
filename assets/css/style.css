@@ -222,7 +222,7 @@ p {
 /* ================= HEADER BASE ================= */
 
 .header_containt {
-    padding: 19px 20px;
+    padding: 19px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,7 +236,7 @@ p {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 60px;
 }
 
@@ -261,10 +261,12 @@ p {
 
 .header_icons {
     display: flex;
+    /* justify-content: flex-end; */
     align-items: center;
     gap: 18px;
     flex: 0 0 auto;
 }
+
 
 .icon_btn {
     width: 46px;
@@ -306,14 +308,10 @@ p {
     font-weight: 600;
     color: #fff;
     background: #f8100d;
-    padding: 0 18px;
-    width: 105px;
+    padding: 0 20px;
+    width: 100%;
 }
 
-.login_btn:hover {
-    background: #000;
-    color: #fff;
-}
 
 /* ================= DROPDOWN ================= */
 
@@ -2310,7 +2308,8 @@ a.ui-button:active,
 
 .hex-wrapper {
     position: relative;
-    height: 500px; /* Fixed height for symmetry */
+    height: 500px;
+    /* Fixed height for symmetry */
     width: 90%;
     margin: 0 auto;
 }
@@ -2325,7 +2324,8 @@ a.ui-button:active,
 }
 
 .hex-center img {
-    width: 180px; /* Adjust logo size */
+    width: 180px;
+    /* Adjust logo size */
 }
 
 /* Individual Node Styling */
@@ -2337,16 +2337,18 @@ a.ui-button:active,
 }
 
 .hex-icon {
-    width: 95px; /* Big Icon Size */
+    width: 95px;
+    /* Big Icon Size */
     height: 95px;
     background: #ffffff;
     border: 1.5px solid #eee;
-    border-radius: 24px; /* Professional rounded corners */
+    border-radius: 24px;
+    /* Professional rounded corners */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
 .hex-icon img {
@@ -2363,14 +2365,44 @@ a.ui-button:active,
 }
 
 /* Symmetrical Positions (Exactly like Image) */
-.p1 { top: 0%; left: 20%; }      /* Innovative Tech */
-.p2 { top: 0%; right: 20%; }     /* Quality Assurance */
+.p1 {
+    top: 0%;
+    left: 20%;
+}
 
-.p3 { top: 40%; left: 5%; }      /* Superior Quality */
-.p4 { top: 40%; right: 5%; }     /* Efficient Production */
+/* Innovative Tech */
+.p2 {
+    top: 0%;
+    right: 20%;
+}
 
-.p5 { bottom: 0%; left: 20%; }   /* Experienced Team */
-.p6 { bottom: 0%; right: 20%; }  /* Product Sampling */
+/* Quality Assurance */
+
+.p3 {
+    top: 40%;
+    left: 5%;
+}
+
+/* Superior Quality */
+.p4 {
+    top: 40%;
+    right: 5%;
+}
+
+/* Efficient Production */
+
+.p5 {
+    bottom: 0%;
+    left: 20%;
+}
+
+/* Experienced Team */
+.p6 {
+    bottom: 0%;
+    right: 20%;
+}
+
+/* Product Sampling */
 
 /* Hover Interactions */
 .hex-node:hover .hex-icon {
@@ -2391,17 +2423,20 @@ a.ui-button:active,
         grid-template-columns: repeat(2, 1fr);
         gap: 40px 20px;
     }
+
     .hex-center {
         grid-column: 1 / span 2;
         position: static;
         transform: none;
         margin: 0 auto 30px;
     }
+
     .hex-node {
         position: static;
         width: 100%;
     }
 }
+
 /* --- Base Node Style --- */
 .hex-node {
     position: absolute;
@@ -2419,45 +2454,135 @@ a.ui-button:active,
 
 /* P1: Top Left */
 @keyframes moveP1 {
-    0% { opacity: 0; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); }
-    100% { opacity: 1; top: 0%; left: 20%; transform: translate(0, 0) scale(1); }
+    0% {
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        top: 0%;
+        left: 20%;
+        transform: translate(0, 0) scale(1);
+    }
 }
-.p1 { animation-name: moveP1; animation-delay: 0.1s; }
+
+.p1 {
+    animation-name: moveP1;
+    animation-delay: 0.1s;
+}
 
 /* P2: Top Right */
 @keyframes moveP2 {
-    0% { opacity: 0; top: 50%; right: 50%; transform: translate(50%, -50%) scale(0); }
-    100% { opacity: 1; top: 0%; right: 20%; transform: translate(0, 0) scale(1); }
+    0% {
+        opacity: 0;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        top: 0%;
+        right: 20%;
+        transform: translate(0, 0) scale(1);
+    }
 }
-.p2 { animation-name: moveP2; animation-delay: 0.2s; }
+
+.p2 {
+    animation-name: moveP2;
+    animation-delay: 0.2s;
+}
 
 /* P3: Middle Left */
 @keyframes moveP3 {
-    0% { opacity: 0; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); }
-    100% { opacity: 1; top: 40%; left: 5%; transform: translate(0, 0) scale(1); }
+    0% {
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        top: 40%;
+        left: 5%;
+        transform: translate(0, 0) scale(1);
+    }
 }
-.p3 { animation-name: moveP3; animation-delay: 0.3s; }
+
+.p3 {
+    animation-name: moveP3;
+    animation-delay: 0.3s;
+}
 
 /* P4: Middle Right */
 @keyframes moveP4 {
-    0% { opacity: 0; top: 50%; right: 50%; transform: translate(50%, -50%) scale(0); }
-    100% { opacity: 1; top: 40%; right: 5%; transform: translate(0, 0) scale(1); }
+    0% {
+        opacity: 0;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        top: 40%;
+        right: 5%;
+        transform: translate(0, 0) scale(1);
+    }
 }
-.p4 { animation-name: moveP4; animation-delay: 0.4s; }
+
+.p4 {
+    animation-name: moveP4;
+    animation-delay: 0.4s;
+}
 
 /* P5: Bottom Left */
 @keyframes moveP5 {
-    0% { opacity: 0; bottom: 50%; left: 50%; transform: translate(-50%, 50%) scale(0); }
-    100% { opacity: 1; bottom: 0%; left: 20%; transform: translate(0, 0) scale(1); }
+    0% {
+        opacity: 0;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0%;
+        left: 20%;
+        transform: translate(0, 0) scale(1);
+    }
 }
-.p5 { animation-name: moveP5; animation-delay: 0.5s; }
+
+.p5 {
+    animation-name: moveP5;
+    animation-delay: 0.5s;
+}
 
 /* P6: Bottom Right */
 @keyframes moveP6 {
-    0% { opacity: 0; bottom: 50%; right: 50%; transform: translate(50%, 50%) scale(0); }
-    100% { opacity: 1; bottom: 0%; right: 20%; transform: translate(0, 0) scale(1); }
+    0% {
+        opacity: 0;
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0%;
+        right: 20%;
+        transform: translate(0, 0) scale(1);
+    }
 }
-.p6 { animation-name: moveP6; animation-delay: 0.6s; }
+
+.p6 {
+    animation-name: moveP6;
+    animation-delay: 0.6s;
+}
 
 /* Mobile par animation off rakhein taki layout kharab na ho */
 @media (max-width: 850px) {
@@ -6311,14 +6436,23 @@ input:checked+.slider:before {
 
 .buy_btn {
     flex: 1;
-    padding: 14px;
+    padding: 14px 25px;
     font-size: 20px;
+    font-weight: 600;
     border-radius: 10px;
     border: none;
-    background: #008000d1;
+    background: #1f8d23;
     color: #fff;
     position: relative;
     overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1;
 }
 
 .buy_btn::before,
@@ -6328,25 +6462,22 @@ input:checked+.slider:before {
     inset: 0;
     border-radius: inherit;
     z-index: -1;
-    opacity: 0.7;
-    animation: whatsappRippleSoft 3.6s infinite ease-out;
+    box-shadow: 0 0 0 0 rgba(31, 141, 35, 0.6);
+    animation: whatsappRippleSoft 2.5s infinite cubic-bezier(0.25, 0, 0.3, 1);
 }
 
 .buy_btn::after {
-    animation-delay: 1.8s;
+    animation-delay: 1.25s;
 }
 
 @keyframes whatsappRippleSoft {
     0% {
-        box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.35), 0 0 0 0 rgba(0, 128, 0, 0.18);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        opacity: 1;
     }
-
-    70% {
-        box-shadow: 0 0 0 14px rgba(0, 128, 0, 0), 0 0 0 26px rgba(0, 128, 0, 0);
-    }
-
     100% {
-        box-shadow: 0 0 0 0 rgba(0, 128, 0, 0), 0 0 0 0 rgba(0, 128, 0, 0);
+        box-shadow: 0 0 15px 30px rgba(37, 211, 102, 0);
+        opacity: 0;
     }
 }
 
@@ -6360,7 +6491,6 @@ input:checked+.slider:before {
     border: 1px solid #eee;
     border-radius: 12px;
     overflow: hidden;
-    /* Bahut zaroori hai */
     cursor: zoom-in;
 }
 
