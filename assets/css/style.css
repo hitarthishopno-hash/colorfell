@@ -3123,8 +3123,7 @@ a.ui-button:active,
     padding: 100px 0 0;
     overflow: hidden;
     color: #fff;
-    font-family: 'Outfit', sans-serif;
-    /* Black color set kiya hai background mein */
+    
     background-color: #000000de;
 }
 
@@ -3136,15 +3135,12 @@ a.ui-button:active,
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    /* Ab image upar hai but opacity kam hai */
-    /* Filter ki jagah opacity use ki hai light black look ke liye */
     opacity: 0.2;
 }
 
 .footer-content-wrapper {
     position: relative;
     z-index: 2;
-    /* Content hamesha image ke upar rahega */
 }
 
 .footer-main-grid {
@@ -3218,9 +3214,9 @@ a.ui-button:active,
 }
 
 .f-deco-img-big {
-    width: 250px;
-    height: auto;
-    opacity: 0.9;
+    width: 435px;
+    height: 170px;
+    /* opacity: 0.9; */
     filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.5));
     transition: 0.5s ease;
 }
@@ -3231,7 +3227,7 @@ a.ui-button:active,
 }
 
 .contact-text {
-    color: #cecece;
+    color: white;
     font-size: 17px;
     line-height: 1.6;
     display: block;
@@ -3243,7 +3239,7 @@ a.ui-button:active,
     padding: 30px 0;
     text-align: center;
     font-size: 17px;
-    color: #888;
+    color: white;
 }
 
 .footer-bottom span {
@@ -3259,7 +3255,7 @@ a.ui-button:active,
 .f-desc {
     font-size: 17px;
     line-height: 1.8;
-    color: #bbb;
+    color: white;
     max-width: 320px;
 }
 
@@ -3285,22 +3281,39 @@ a.ui-button:active,
 }
 
 @media (max-width: 991px) {
-    .f-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
 
     .footer-main-grid {
-        text-align: center;
+        flex-direction: column;
+        align-items: flex-start; /* IMPORTANT */
+        text-align: left;        /* IMPORTANT */
+        gap: 40px;
     }
 
-    .f-socials,
+    .footer-col {
+        width: 100%;
+        text-align: left;
+    }
+
+    .f-title::after {
+        left: 0;                 /* move line to left */
+        transform: none;
+    }
+
+    .f-socials {
+        justify-content: flex-start;
+    }
+
     .f-deco-container {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .f-desc {
-        margin: 0 auto;
+        margin: 0;
+    }
+}
+@media (max-width: 576px) {
+    .f-deco-img-big {
+        max-width: 100%;
     }
 }
 
