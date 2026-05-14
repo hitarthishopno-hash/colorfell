@@ -175,7 +175,7 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    user-select: none;
+    /* user-select: none; */
 }
 
 body {
@@ -5703,9 +5703,9 @@ input:checked+.slider:before {
 }
 
 .contact_call {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 .contact_pcall {
