@@ -288,7 +288,7 @@ p {
 
 .icon_btn:hover {
     background: #f8100d;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .icon_btn:hover i {
@@ -1442,7 +1442,7 @@ body.sidebar-open {
     align-items: center;
     gap: 10px;
     padding: 12px 22px;
-    border-radius: 40px;
+    border-radius: 5px;
     font-size: 19px;
     text-decoration: none;
     background: #f8100d;
@@ -3545,13 +3545,13 @@ a.ui-button:active,
 }
 
 .about_heading {
-    padding: 20px 0px;
+    padding: 0px 0px;
     color: var(--5, #FFF);
     font-family: Outfit;
-    font-size: 80px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100px;
+    line-height: 80px;
 }
 
 .about_content {
@@ -3607,7 +3607,7 @@ a.ui-button:active,
 }
 
 .border_hero2 {
-    border-left: 10px solid #FF2424;
+    border-left: 4px solid #FF2424;
 }
 
 .about_who_p {
@@ -7086,156 +7086,6 @@ input:checked+.slider:before {
 
 
 
-/* ================= Login Pop up ================= */
-/* OVERLAY */
-.login_overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s ease;
-    z-index: 999;
-}
-
-.login_overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* POPUP */
-.login_popup_new {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 420px;
-    background: #fff;
-    border-radius: 28px;
-    padding: 45px 40px;
-    transform: translate(-50%, -40%) scale(0.92);
-    opacity: 0;
-    transition: 0.45s cubic-bezier(.4, 0, .2, 1);
-    z-index: 1000;
-}
-
-.login_popup_new.active {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-}
-
-/* CLOSE */
-.login_close_new {
-    position: absolute;
-    top: 18px;
-    right: 22px;
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* HEADER */
-.login_header_new {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.login_header_new h2 {
-    font-size: 30px;
-    margin-bottom: 6px;
-}
-
-.login_header_new p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* INPUT FLOAT STYLE */
-.login_input_wrap {
-    position: relative;
-    margin-bottom: 26px;
-}
-
-.login_input_wrap input {
-    width: 100%;
-    padding: 15px 14px;
-    border-radius: 14px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    outline: none;
-}
-
-.login_input_wrap label {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #777;
-    pointer-events: none;
-    transition: 0.3s;
-    background: #fff;
-    padding: 0 6px;
-}
-
-.login_input_wrap input:focus+label,
-.login_input_wrap input:not(:placeholder-shown)+label {
-    top: -7px;
-    font-size: 12px;
-    color: #000;
-}
-
-/* FORGOT */
-.login_forgot_new {
-    text-align: right;
-    margin-bottom: 28px;
-}
-
-.login_forgot_new a {
-    font-size: 14px;
-    color: #444;
-    text-decoration: underline;
-}
-
-/* BUTTON */
-.login_btn_new {
-    width: 100%;
-    padding: 14px;
-    border-radius: 8px;
-    border: none;
-    background: #f8100d;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.login_btn_new:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-/* FOOTER */
-.login_footer_new {
-    margin-top: 26px;
-    text-align: center;
-    font-size: 15px;
-}
-
-.login_footer_new a {
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-@media (max-width: 480px) {
-    .login_popup_new {
-        width: 90%;
-        padding: 35px 25px;
-    }
-}
-
 
 
 
@@ -7332,5 +7182,179 @@ input:checked+.slider:before {
 
     .terms-content h3 {
         font-size: 22px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PRODUCT DETAIL RIGHT SIDE CAITAIN */
+
+.product_wrap {
+    padding: 20px;
+}
+
+.project_h2 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    color: #111;
+}
+
+.product_no_box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.product_label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+.product_number {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.customize_title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    color: #111;
+}
+
+.action_btns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.download_btn,
+.buy_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.download_btn {
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.buy_btn {
+    background: #25D366;
+    color: #fff;
+    border: 1px solid #25D366;
+}
+
+.download_btn i,
+.buy_btn i {
+    font-size: 18px;
+}
+
+/* =========================
+   Responsive CSS
+========================= */
+
+@media (max-width: 991px) {
+
+    .product_wrap {
+        padding: 15px 0;
+    }
+
+    .project_h2 {
+        font-size: 28px;
+    }
+
+    .action_btns {
+        gap: 12px;
+    }
+
+    .download_btn,
+    .buy_btn {
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .project_h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .product_no_box {
+        margin-bottom: 20px;
+    }
+
+    .action_btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .download_btn,
+    .buy_btn {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .project_h2 {
+        font-size: 21px;
+    }
+
+    .product_label,
+    .product_number {
+        font-size: 14px;
+    }
+
+    .customize_title {
+        font-size: 14px;
+    }
+
+    .download_btn,
+    .buy_btn {
+        font-size: 14px;
+        padding: 13px 16px;
     }
 }
