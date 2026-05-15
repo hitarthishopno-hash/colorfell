@@ -231,7 +231,14 @@ p {
 .logo {
     flex: 0 0 auto;
 }
-
+.logo img{
+    width: 280px;
+}
+@media (max-width:768px) {
+    .logo img{
+    width: 200px;
+}
+}
 .navbar_header {
     flex: 1;
     display: flex;
@@ -3262,10 +3269,15 @@ a.ui-button:active,
 }
 
 .f-logo {
-    width: 190px;
+    width: 280px;
     margin-bottom: 25px;
 }
-
+@media (max-width:768px) {
+   .f-logo {
+    width: 250px;
+    margin-bottom: 25px;
+} 
+}
 .f-desc {
     font-size: 17px;
     line-height: 1.8;
@@ -5218,7 +5230,7 @@ input:checked+.slider:before {
 
 /* ============================ 26.Blog_page CSS ======================= */
 .blog_hero_section {
-    background-image: url(../image/blog/blog_back.jpg);
+    background-image: url(../image/project/project_back.png);
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -6004,16 +6016,6 @@ input:checked+.slider:before {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 575px) {
     .pos1 {
         transform: none;
@@ -6027,18 +6029,6 @@ input:checked+.slider:before {
         left: auto;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -7376,4 +7366,34 @@ input:checked+.slider:before {
         font-size: 14px;
         padding: 13px 16px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* blog detail css Add */
+.blog_details_row {
+    margin-top: 50px;
+}
+
+.blog_details_img {
+    border-radius: 20px;
+}
+
+.service_swiper_row {
+    margin-top: 50px;
+}
+
+.service_swiper_img {
+    border-radius: 20px;
 }
