@@ -685,8 +685,10 @@ body.sidebar-open {
 .slide1 {
     /* background-image: url(../image/home/hero1.jpg); */
     background-image: url(../image/home/hero2.png);
-    height: 835px;
-    object-fit: fill;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -695,8 +697,10 @@ body.sidebar-open {
 .slide2 {
     /* background-image: url(../image/home/hero2.jpg); */
     background-image: url(../image/home/hero1.png);
-    height: 835px;
-    object-fit: fill;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -705,8 +709,10 @@ body.sidebar-open {
 .slide3 {
     /* background-image: url(../image/home/hro3.jpg); */
     background-image: url(../image/home/hero3.png);
-    height: 835px;
-    object-fit: fill;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -819,6 +825,14 @@ body.sidebar-open {
 
 .swiper-slide-active .slider_content_video1 {
     opacity: 1;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px !important;
+    height: 20px !important;
+    background-size: 20px 20px !important;
 }
 
 /* ============================ 4.Offer CSS ======================= */
@@ -3123,7 +3137,7 @@ a.ui-button:active,
     padding: 100px 0 0;
     overflow: hidden;
     color: #fff;
-    
+
     background-color: #000000de;
 }
 
@@ -3284,8 +3298,10 @@ a.ui-button:active,
 
     .footer-main-grid {
         flex-direction: column;
-        align-items: flex-start; /* IMPORTANT */
-        text-align: left;        /* IMPORTANT */
+        align-items: flex-start;
+        /* IMPORTANT */
+        text-align: left;
+        /* IMPORTANT */
         gap: 40px;
     }
 
@@ -3295,7 +3311,8 @@ a.ui-button:active,
     }
 
     .f-title::after {
-        left: 0;                 /* move line to left */
+        left: 0;
+        /* move line to left */
         transform: none;
     }
 
@@ -3311,6 +3328,7 @@ a.ui-button:active,
         margin: 0;
     }
 }
+
 @media (max-width: 576px) {
     .f-deco-img-big {
         max-width: 100%;
@@ -6488,6 +6506,7 @@ input:checked+.slider:before {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
         opacity: 1;
     }
+
     100% {
         box-shadow: 0 0 15px 30px rgba(37, 211, 102, 0);
         opacity: 0;
